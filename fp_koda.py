@@ -222,8 +222,6 @@ if __name__ == "__main__":
     with open('rezultati', 'w', newline='') as detoteka_csv:
     # create a CSV writer object
         writer = csv.writer(detoteka_csv)
-
-    # write the rows to the CSV file
         writer.writerows(rezultati)
 
 
