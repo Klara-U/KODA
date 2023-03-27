@@ -64,10 +64,38 @@ def get_xyq(n):
     dy = b1 - ymin
     points = [(p[0]+dx, p[1]+dy) for p in points]
     # shranimo točke po vrsti kot si sledijo v smeri urinega kazalca
+    # izračuna center tock 
     center = tuple(map(operator.truediv, reduce(lambda x, y: map(operator.add, x, y), points), [len(points)] * 2))
     outer = sorted(points, key=lambda coord: (-135 - math.degrees(math.atan2(*tuple(map(operator.sub, coord, center))[::-1]))) % 360)
     # dobimo urejene točke poligona
     return outer
+
+#=========================================================
+# GENERIRANJE PRAVILNEGA N-KOTNIKA
+#=========================================================
+
+pravilni_n_kotnik = (lambda n: (lambda m=__import__("math"), rn=__import__("random"): (r:=rn.random() * 1000) and 
+                    (phi0:=rn.random() * 2 * m.pi) and (phi:=(2 * m.pi)/n) and [(r * m.cos(phi0 + i * phi), r * m.sin(phi0 + i * phi)) for i in range(n)])())
+
+#=========================================================
+# GENERIRANJE NAKLJUČNIH TOČK NA KROŽNICI
+#=========================================================
+
+def random_tocka_na_krogu(radij):
+    # Funkcija vrne koordinate random točke na krožnici z nekim radijem.
+    phi_tocke = random.uniform(0, 2*math.pi)
+    
+    return (radij*math.cos(phi_tocke), radij*math.sin(phi_tocke))
+
+def random_tocke_na_krogu(radij, stevilo_tock):
+    sez = []
+    for x in range(stevilo_tock):
+        sez.append(random_tocka_na_krogu(radij))
+    center = tuple(map(operator.truediv, reduce(lambda x, y: map(operator.add, x, y), sez), [len(sez)] * 2))
+    outer = sorted(sez, key=lambda coord: (-135 - math.degrees(math.atan2(*tuple(map(operator.sub, coord, center))[::-1]))) % 360)
+    # dobimo urejene točke poligona
+    return outer
+
 
 #=========================================================
 # GENERIRANJE RANDOM TOČK ZNOTRAJ POLIGONA
@@ -172,19 +200,22 @@ def DP_pot(outer, inner):
                     f[i, s, len(outer) + b] = [temp, [i, novi_s, i]]
                 #print((i, s, len(outer) + b), f[i, s, len(outer) + b])
 
-
+    #koncno resitev nastavimo na neskoncno
     final = [math.inf, None]
+    #izberemo najkrajsi obhod, če je zadnja točka notranja tocka
     for t in subs[-1]:
         temp = f[i, subs[-1], len(outer) + t][0] + dist(outer[0], inner[t])
         if temp < final[0]:
             final = [temp, [i, subs[-1], len(outer) + t]]
-
+    #primerjamo najkrajši obhod iz prejšnjih vrstic, z obhodom, ko je zadnja tocka zunanja
     temp = f[i, subs[-1], i][0] + dist(outer[0], outer[i])
     if temp < final[0]:
         final = [temp, [i, subs[-1], i]]
-
+    #predzadnja točka
     prev = final[1]
+    #pot nastavimo na 0
     pot = [0]
+    # dodajamo zadnje točke v vrsti
     while prev:
         pot.append(prev[2])
         prev = f[tuple(prev)][1]
@@ -193,36 +224,70 @@ def DP_pot(outer, inner):
 
     vse = outer + inner
     pot_tocke = [vse[i] for i in pot]
+    # vrne dolzino najkrajšega obhoda in zaporedje, kako si sledijo točke
     return final, pot_tocke
 
 
 
 if __name__ == "__main__":
     rezultati = []
-    for k in range(5):
-        vrstica = [k]
-        for j in range(5):
-            n = 20
-            if len(sys.argv) == 2:
-                n = int(sys.argv[1])
-            outer = get_xyq(n)
-            polygon = Polygon(outer)
-            notranje_tocke = random_points_in_polygon(polygon,k)
-            zacetni_cas = time.perf_counter()
-            dolzina, pot = DP_pot(outer,notranje_tocke)
-            koncni_cas = time.perf_counter()
-            cas_izvajanja = koncni_cas - zacetni_cas
-            #plt.plot([p[0] for p in pot], [p[1] for p in pot],marker="o", markersize=5)
-            #plt.show()
-            vrstica.append(cas_izvajanja)
-            print(cas_izvajanja)
-        rezultati.append(vrstica)
-    print(rezultati)
+    for n in range(10,11, 10):
+        for k in range(1):
+            vrstica = [n,k]
+            for j in range(1):
+                n = 20
+                k = 10
 
-    with open('rezultati', 'w', newline='') as detoteka_csv:
-    # create a CSV writer object
-        writer = csv.writer(detoteka_csv)
-        writer.writerows(rezultati)
+                # PODATKI
+                podatki = 3
+
+                if podatki == 1:
+                    # NAKLJUČNO GENERIRAN KONVEKSEN POLIGON
+                    outer = get_xyq(n)
+                    polygon = Polygon(outer)
+                    notranje_tocke = random_points_in_polygon(polygon,k)
+                elif podatki == 2:
+                    # PRAVILNI N-KOTNIK
+                    outer = pravilni_n_kotnik(n)
+                    outer = outer + outer[:1]
+                    polygon_1 = Polygon(outer)
+                    notranje_tocke = random_points_in_polygon(polygon_1, k)
+                else:
+                    #KROŽNICA
+                    radij = random.random() * 1000
+                    outer = random_tocke_na_krogu(radij,n)
+                    polygon = Polygon(outer)
+                    notranje_tocke = random_points_in_polygon(polygon, k)
+                
+                #ALGORITEM
+                zacetni_cas = time.perf_counter()
+                dolzina, pot = DP_pot(outer,notranje_tocke)
+                koncni_cas = time.perf_counter()
+                cas_izvajanja = round(koncni_cas - zacetni_cas, 7)
+                
+                #plotanje
+                fig, ax = plt.subplots(figsize=(5, 5))
+                ax.plot([p[0] for p in pot], [p[1] for p in pot],"-", color='black')
+                ax.plot([p[0] for p in outer], [p[1] for p in outer],"o", markersize=6)
+                ax.plot([p[0] for p in notranje_tocke], [p[1] for p in notranje_tocke],"o", markersize=6)
+                #ax.set_xlim([0,1])
+                #ax.set_ylim([0,1])
+                plt.show()
+                vrstica.append(cas_izvajanja)
+                print(cas_izvajanja)
+            rezultati.append(vrstica)
+            
+
+    #with open('rezultati', 'w', newline='') as detoteka_csv:
+    #    writer = csv.writer(detoteka_csv)
+    #    writer.writerows(rezultati)
+
+    
+
+    
+    
+
+    
 
 
 
