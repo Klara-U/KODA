@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.20)  11 JAN 2023 07:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.20)  27 MAR 2023 10:48
 entering extended mode
 **"c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex"
 ("c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex"
@@ -469,32 +469,77 @@ Overfull \hbox (7.79411pt too wide) in paragraph at lines 128--128
  []
 
 [2]
-<primeri_20_10.png, id=27, 1093.4451pt x 361.35pt>
-File: primeri_20_10.png Graphic file (type png)
-<use primeri_20_10.png>
-Package pdftex.def Info: primeri_20_10.png  used on input line 152.
-(pdftex.def)             Requested size: 360.0pt x 118.96466pt.
- [3 <c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/primeri_20_10.png>]
-<cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon.pdf, id=33, 403.5075pt x 296.10625pt>
-File: cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon.pdf Graphic file (type pdf)
-<use cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon.pdf>
-Package pdftex.def Info: cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon.pdf  used on input line 176.
-(pdftex.def)             Requested size: 161.9989pt x 118.87866pt.
-<cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici.pdf, id=34, 403.5075pt x 296.10625pt>
-File: cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici.pdf Graphic file (type pdf)
-<use cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici.pdf>
-Package pdftex.def Info: cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici.pdf  used on input line 183.
-(pdftex.def)             Requested size: 161.9989pt x 118.87866pt.
+
+LaTeX Warning: File `primeri_20_10.png' not found on input line 152.
+
+
+c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex:152: Package pdftex.def Error: File `"""primeri_20_10".png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.152 ...cs[width = \textwidth]{primeri_20_10.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: File `cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon.pdf' not found on input line 176.
+
+
+c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex:176: Package pdftex.def Error: File `"""cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon".pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 ...akljucno_generiran_konveksni_poligon.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici.pdf' not found on input line 183.
+
+
+c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex:183: Package pdftex.def Error: File `"""cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici".pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 ...ritma_za_nakljucne_tocke_na_kroznici.pdf}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Underfull \hbox (badness 1270) in paragraph at lines 184--184
 []\T1/cmr/m/n/10 (b) |£as iz-vaj-nja al-go-ritma za na-
  []
 
-<povprecje_30.jpg, id=35, 505.89pt x 361.35pt>
-File: povprecje_30.jpg Graphic file (type jpg)
-<use povprecje_30.jpg>
-Package pdftex.def Info: povprecje_30.jpg  used on input line 197.
-(pdftex.def)             Requested size: 360.0pt x 257.14474pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: File `povprecje_30.jpg' not found on input line 197.
+
+
+c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex:197: Package pdftex.def Error: File `"""povprecje_30".jpg' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197 ...ics[width = \textwidth]{povprecje_30.jpg}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -503,11 +548,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--206
 
  []
 
-<varianca.png, id=36, 505.89pt x 361.35pt>
-File: varianca.png Graphic file (type png)
-<use varianca.png>
-Package pdftex.def Info: varianca.png  used on input line 213.
-(pdftex.def)             Requested size: 360.0pt x 257.14474pt.
+[3] [4]
+
+LaTeX Warning: File `varianca.png' not found on input line 213.
+
+
+c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/porocilo.tex:213: Package pdftex.def Error: File `"""varianca".png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.213 ...raphics[width = \textwidth]{varianca.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -516,26 +572,23 @@ Overfull \hbox (2.24667pt too wide) in paragraph at lines 217--224
 []\T1/cmr/m/n/10.95 Ker so na za-£etku £asi iz-va-ja-nja al-go-ritma kratki, so tudi va-ri-ance majhne,
  []
 
-[4 <c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/cas_izvajanja_algoritma_za_nakljucno_generiran_konveksni_poligon.pdf> <c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/cas_izvajanja_algoritma_za_nakljucne_tocke_na_kroznici.pdf>]
+[5] [6] [7] ("c:/Users\10\Desktop\FAKS\3. letnik\FINANCNI PRAKTIKUM\PROJEKT\TSP-in-the-plane-with-few-interior-points\KODA\porocilo.aux")
 
-LaTeX Warning: Text page 5 contains only floats.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Overfull \vbox (2.68921pt too high) has occurred while \output is active []
-
- [5 <c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/povprecje_30.jpg> <c:/Users/10/Desktop/FAKS/3. letnik/FINANCNI PRAKTIKUM/PROJEKT/TSP-in-the-plane-with-few-interior-points/KODA/varianca.png>] [6] ("c:/Users\10\Desktop\FAKS\3. letnik\FINANCNI PRAKTIKUM\PROJEKT\TSP-in-the-plane-with-few-interior-points\KODA\porocilo.aux") ) 
+ ) 
 Here is how much of TeX's memory you used:
- 15218 strings out of 492452
- 296215 string characters out of 3121464
- 340386 words of memory out of 3000000
- 19276 multiletter control sequences out of 15000+200000
+ 15198 strings out of 492452
+ 295368 string characters out of 3121464
+ 342315 words of memory out of 3000000
+ 19256 multiletter control sequences out of 15000+200000
  13912 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,8n,54p,522b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,7n,54p,522b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\10\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/10/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "c:/Users\10\Desktop\FAKS\3. letnik\FINANCNI PRAKTIKUM\PROJEKT\TSP-in-the-plane-with-few-interior-points\KODA\porocilo.pdf" (7 pages, 360906 bytes).
+Output written on "c:/Users\10\Desktop\FAKS\3. letnik\FINANCNI PRAKTIKUM\PROJEKT\TSP-in-the-plane-with-few-interior-points\KODA\porocilo.pdf" (8 pages, 164207 bytes).
 PDF statistics:
- 330 PDF objects out of 1000 (max. 8388607)
+ 319 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
